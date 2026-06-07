@@ -1,57 +1,122 @@
-# ApplySignal v1.2
+# ApplySignal
 
-Candidate-side decision support for modern recruitment pipelines.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-ff4b4b)
+![Status](https://img.shields.io/badge/status-portfolio%20MVP-success)
+![Version](https://img.shields.io/badge/version-v1.2-informational)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-ApplySignal helps job applicants track opportunities, interpret recruitment-process signals, and decide where to invest energy. It is intentionally framed as a **personal workflow and prioritization utility**, not as a tool for judging or shaming recruiters.
+**Candidate-side recruitment intelligence dashboard for tracking job applications, scoring process signals, and prioritizing opportunities.**
+
+ApplySignal helps job seekers turn scattered applications, mixed recruiter signals, and hidden candidate effort into a clear opportunity pipeline. It is intentionally framed as a **personal workflow and decision-support utility**, not as a tool for judging or shaming recruiters or companies.
+
+---
+
+## Preview
+
+![ApplySignal hero and pipeline overview](images/image-1.png)
+
+![ApplySignal opportunity cards](images/image-2.png)
+
+![ApplySignal pipeline table and charts](images/image-3.png)
+
+![ApplySignal recommendation explanations](images/image-4.png)
+
+---
 
 ## What it does
 
-- Tracks job opportunities in a local CSV file.
-- Scores each opportunity across five dimensions:
-  - Signal strength
-  - Process clarity
-  - Candidate effort cost
-  - Reciprocity
-  - Overall opportunity score
-- Suggests neutral next actions:
-  - Invest
-  - Monitor
-  - Follow up once
-  - Low-effort only
-  - Deprioritize
-  - Archive or low-effort only
-- Visualizes the pipeline with cards, tables, and charts.
-- Includes demo data for portfolio screenshots.
-- Supports CSV export.
+ApplySignal lets candidates track each opportunity and score it across several practical dimensions:
+
+- **Signal strength** — is the opportunity visibly moving?
+- **Process clarity** — are next steps, contacts, salary, and timeline clear?
+- **Candidate effort cost** — how much work is the candidate being asked to provide?
+- **Reciprocity** — is the company giving enough information and attention in return?
+- **Opportunity score** — a combined score that helps prioritize where to invest energy.
+
+The app then suggests neutral next actions such as:
+
+- **Invest**
+- **Monitor**
+- **Follow up once**
+- **Low-effort only**
+- **Deprioritize**
+- **Archive**
+
+---
 
 ## Why this exists
 
-Modern job applications can create asymmetrical friction: candidates may be asked for tailored CVs, cover letters, forms, asynchronous videos, tests, and work samples before receiving clear information about salary, timeline, or next steps.
+Modern job searches can create asymmetrical friction. Candidates may be asked for tailored CVs, cover letters, forms, asynchronous videos, tests, and work samples before receiving clear information about salary, timeline, remote policy, or next steps.
 
 ApplySignal turns that uncertainty into a calm decision-support process:
 
-> Invest proportionally to the clarity, seriousness, and reciprocity of the opportunity.
+> **Invest proportionally to the clarity, seriousness, and reciprocity of the opportunity.**
 
-## New in v1.2
+The goal is not to criticize HR teams. The goal is to help candidates manage uncertainty, document signals, and protect their time during a complex recruitment pipeline.
 
-- Polished dashboard layout.
-- Better visual hierarchy and metric cards.
-- Priority application cards.
-- Demo data loader.
-- Cleaner status guide.
-- Improved chart layout.
-- More constructive product language.
-- Better small-data empty state.
+---
+
+## Features
+
+- Local job application tracking
+- Manual opportunity entry
+- Demo data loader for portfolio screenshots
+- Signal, clarity, effort, reciprocity, and opportunity scoring
+- Recommendation logic for next actions
+- Application cards with score badges
+- Pipeline table
+- Charts for:
+  - applications by status
+  - recommended actions
+  - opportunity score by company
+  - effort cost vs signal strength
+- Scoring guide and status guide
+- CSV export
+- Local CSV persistence
+
+---
+
+## Screenshots
+
+### Recruitment signal overview
+
+![ApplySignal dashboard overview](images/image-1.png)
+
+### Opportunity triage cards
+
+![ApplySignal opportunity cards](images/image-2.png)
+
+### Pipeline and visual analysis
+
+![ApplySignal charts](images/image-3.png)
+
+### Recommendation rationale
+
+![ApplySignal recommendation explanations](images/image-4.png)
+
+---
 
 ## Installation
 
+Clone the repository:
+
 ```bash
+git clone https://github.com/MinervaRose/applysignal.git
+cd applysignal
+```
+
+Create a virtual environment and install dependencies.
+
+### Windows PowerShell
+
+```powershell
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-On macOS/Linux:
+### macOS / Linux
 
 ```bash
 python -m venv .venv
@@ -60,26 +125,81 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+---
+
 ## Data storage
 
-The app stores data locally in:
+ApplySignal stores application data locally in:
 
 ```text
 data/applications.csv
 ```
 
-This keeps the MVP simple, transparent, and easy to version or export.
+This keeps the MVP simple, transparent, and easy to export or reset.
+
+The repository can include:
+
+```text
+data/.gitkeep
+```
+
+so that the `data/` folder exists without committing personal application data.
+
+---
 
 ## Product positioning
 
-ApplySignal does not claim that a weak process signal means a company is bad. It simply helps candidates manage uncertainty, reduce wasted effort, and protect attention during a job search.
+ApplySignal does **not** claim that a weak process signal means a company is bad.
+
+It simply helps candidates manage uncertainty by asking practical questions:
+
+- Is there a concrete next step?
+- Has a human decision-maker engaged?
+- Is the salary or contract information clear?
+- Is the requested effort proportionate?
+- Is the company giving enough reciprocal signal to justify more candidate time?
+
+This makes the project useful as a small example of:
+
+- human-centered product design
+- decision-support logic
+- candidate experience tooling
+- recruitment pipeline analysis
+- Streamlit dashboard development
+- practical data visualization
+
+---
+
+## New in v1.2
+
+- Dramatic hero section
+- Cleaner app title without emoji
+- Polished dashboard layout
+- Better visual hierarchy and metric cards
+- Priority application cards
+- Demo data loader
+- Cleaner status guide
+- Improved chart layout
+- Constructive HR-neutral product language
+- Better small-data empty state
+
+---
 
 ## Roadmap ideas
 
-- Email/import workflow.
-- Job description parser.
-- Follow-up reminders.
-- Salary benchmark helper.
-- LLM-generated opportunity summary.
-- Privacy-first local desktop version.
-- Streamlit Cloud deployment.
+Possible future improvements:
+
+- Job description parser
+- Email/import workflow
+- Follow-up reminders
+- Salary benchmark helper
+- LLM-generated opportunity summary
+- Privacy-first local desktop version
+- Streamlit Community Cloud deployment
+- Export to Markdown or Notion
+
+---
+
+## License
+
+This project is released under the MIT License.
