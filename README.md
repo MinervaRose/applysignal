@@ -8,7 +8,7 @@
 
 **Candidate-side recruitment intelligence dashboard for tracking job applications, scoring process signals, and prioritizing opportunities.**
 
-ApplySignal helps job seekers turn scattered applications, mixed recruiter signals, and hidden candidate effort into a clear opportunity pipeline. It is intentionally framed as a **personal workflow and decision-support utility**, not as a tool for judging or shaming recruiters or companies.
+ApplySignal helps job seekers turn scattered applications, mixed recruiter signals, and hidden candidate effort into a clear opportunity pipeline. It is intentionally framed as a **personal workflow and decision-support utility**.
 
 ---
 
@@ -47,13 +47,13 @@ The app then suggests neutral next actions such as:
 
 ## Why this exists
 
-Modern job searches can create asymmetrical friction. Candidates may be asked for tailored CVs, cover letters, forms, asynchronous videos, tests, and work samples before receiving clear information about salary, timeline, remote policy, or next steps.
+Modern job searches can create asymmetrical experience. Candidates may be asked for tailored CVs, cover letters, forms, asynchronous videos, tests, and work samples before receiving clear information about salary, timeline, remote policy, or next steps.
 
 ApplySignal turns that uncertainty into a calm decision-support process:
 
-> **Invest proportionally to the clarity, seriousness, and reciprocity of the opportunity.**
+> **Invest proportionally to the clarity and reciprocity of the opportunity.**
 
-The goal is not to criticize HR teams. The goal is to help candidates manage uncertainty, document signals, and protect their time during a complex recruitment pipeline.
+The goal is to help candidates manage uncertainty, document signals, and protect their time during a complex recruitment pipeline.
 
 ---
 
@@ -172,15 +172,11 @@ This makes the project useful as a small example of:
 
 ## New in v1.2
 
-- Dramatic hero section
-- Cleaner app title without emoji
 - Polished dashboard layout
 - Better visual hierarchy and metric cards
 - Priority application cards
-- Demo data loader
 - Cleaner status guide
 - Improved chart layout
-- Constructive HR-neutral product language
 - Better small-data empty state
 
 ---
